@@ -115,8 +115,6 @@ function calculateWinner(squares: string[], lastMove: number | null) {
   ];
 
   const relevantLines = winningLines.filter(line => line.includes(lastMove));
-
-  console.log('relevantLines: ', relevantLines);
   
   for (const [a, b, c] of relevantLines) {
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
